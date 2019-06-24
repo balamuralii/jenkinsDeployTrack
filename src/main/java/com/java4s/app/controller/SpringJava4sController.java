@@ -66,12 +66,12 @@ public class SpringJava4sController {
 	
 	
 	
-	@RequestMapping("/sayHello")
+	@RequestMapping("/say")
 	public String sayHello() {
 		
-		List<location> customers = dao.isData();		 
+		//List<location> customers = dao.isData();		 
 		
-		return "Hello";
+		return "Helloss";
 	}
 }
 
