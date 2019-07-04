@@ -11,6 +11,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<warName>gsctrack.war</warName>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
