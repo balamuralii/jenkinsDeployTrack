@@ -5,6 +5,7 @@
 
 package com.java4s.app.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.json.simple.JSONObject;
@@ -69,7 +70,14 @@ public class SpringJava4sController {
 	@RequestMapping("/say")
 	public String sayHello() {
 		
-		//List<location> customers = dao.isData();		 
+		//List<location> customers = dao.isData();	
+		 ArrayList  al = new ArrayList<> (); 
+		 
+		 al.add("lsdkja");
+		 al.add("sdad");
+		 al.add("wqewqe");
+		 
+		 al.add(1);
 		
 		return "Helloss";
 	}
