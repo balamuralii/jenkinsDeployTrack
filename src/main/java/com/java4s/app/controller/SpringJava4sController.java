@@ -93,7 +93,7 @@ public class SpringJava4sController {
 		
 		//List<location> customers = dao.isData();		 
 		
-		return "Helloss";
+		return "Hell bossoss";
 	}
 	
 	
