@@ -41,7 +41,7 @@ public class SpringJava4sController {
 	public SpringJava4sDAO dao;
 	
 		
-	@RequestMapping(value = "/sendemail")
+	@RequestMapping(value = "/sendem")
 	   public String sendEmail() throws AddressException, MessagingException, IOException {
 		
 		sendmail();

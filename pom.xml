@@ -7,6 +7,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<build>
+	<finalName>gsctrack</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
