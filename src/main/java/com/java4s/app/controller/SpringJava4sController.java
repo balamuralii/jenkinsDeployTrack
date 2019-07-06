@@ -41,7 +41,7 @@ public class SpringJava4sController {
 	public SpringJava4sDAO dao;
 	
 		
-	@RequestMapping(value = "/sendmail")
+	@RequestMapping(value = "/sendmails")
 	   public String sendEmail() throws AddressException, MessagingException, IOException {
 		
 		sendmail();
@@ -93,7 +93,7 @@ public class SpringJava4sController {
 		
 		//List<location> customers = dao.isData();		 
 		
-		return "Hell booo";
+		return "Hell bbbbbbbbb";
 	}
 	
 	
