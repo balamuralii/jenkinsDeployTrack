@@ -45,7 +45,7 @@ public class SpringJava4sController {
 	   public String sendEmail() throws AddressException, MessagingException, IOException {
 		
 		sendmail();
-	      return "Emai been sent successfully";
+	      return "Emai been sent suessfully";
 	   }  
 
 	@RequestMapping("/getcustLocation")
