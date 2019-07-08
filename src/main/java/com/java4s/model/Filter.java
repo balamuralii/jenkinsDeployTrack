@@ -1,6 +1,7 @@
 package com.java4s.model;
 
 import java.io.IOException;
+import java.util.Enumeration;
 
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -28,6 +29,12 @@ public class Filter implements javax.servlet.Filter{
 		HttpServletResponse res = (HttpServletResponse) response;
 		System.out.println("Request uri is :"+ req.getRequestURI());
 		System.out.println();
+		Enumeration<String> headerNames = ((HttpServletRequest) request).getHeaderNames();
+	    if (headerNames != null) {
+	            while (headerNames.hasMoreElements()) {
+	                    System.out.println("Header: " + ((HttpServletRequest) request).getHeader(headerNames.nextElement()));
+	            }
+	    }
 		chain.doFilter(request, response);
 		
 	}

@@ -117,17 +117,6 @@ public class SpringJava4sController {
 		   msg.setSubject("Your location services OTP");
 		   msg.setContent("your OTP is 123456", "text/html");
 		   msg.setSentDate(new Date());
-
-//		   MimeBodyPart messageBodyPart = new MimeBodyPart();
-//		   messageBodyPart.setContent("Your otp is", "text/html");
-//
-//		   Multipart multipart = new MimeMultipart();
-//		   multipart.addBodyPart(messageBodyPart);
-//		   MimeBodyPart attachPart = new MimeBodyPart();
-
-		  // attachPart.attachFile("/home/balamurali/Pictures/Desert-2-768x432.jpg");
-		   //multipart.addBodyPart(attachPart);
-		   //msg.setContent(multipart);
 		   Transport.send(msg);   
 		}
 }
