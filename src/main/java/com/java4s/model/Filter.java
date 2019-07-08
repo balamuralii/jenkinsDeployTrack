@@ -1,6 +1,7 @@
 package com.java4s.model;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Enumeration;
 
 import javax.servlet.FilterChain;
@@ -25,16 +26,25 @@ public class Filter implements javax.servlet.Filter{
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		// TODO Auto-generated method stub
-		HttpServletRequest req = (HttpServletRequest) request;
-		HttpServletResponse res = (HttpServletResponse) response;
-		System.out.println("Request uri is :"+ req.getRequestURI());
-		System.out.println();
+		PrintWriter out = response.getWriter();
+		response.setContentType("text/plain");
+
 		Enumeration<String> headerNames = ((HttpServletRequest) request).getHeaderNames();
-	    if (headerNames != null) {
-	            while (headerNames.hasMoreElements()) {
-	                    System.out.println("Header: " + ((HttpServletRequest) request).getHeader(headerNames.nextElement()));
-	            }
-	    }
+
+		while (headerNames.hasMoreElements()) {
+
+			String headerName = headerNames.nextElement();
+			out.write(headerName);
+			out.write("n");
+
+			Enumeration<String> headers = ((HttpServletRequest) request).getHeaders(headerName);
+			while (headers.hasMoreElements()) {
+				String headerValue = headers.nextElement();
+				out.write("t" + headerValue);
+				out.write("n");
+			}
+
+		}
 		chain.doFilter(request, response);
 		
 	}
